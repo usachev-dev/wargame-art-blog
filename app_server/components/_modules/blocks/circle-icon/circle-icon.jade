@@ -1,0 +1,20 @@
+mixin circle-icon(spec)
+  - spec = spec || {};
+  - var size = spec.size || '50px'
+  - var font_size = spec.font_size || '26px'
+  - var color = spec.color || 'white'
+  - var background_color = spec.background_color || 'black'
+  - var fa_symbol = spec.fa_symbol || ''
+  - var symbol = spec.symbol || ''
+  - var style = 'line-height: ' + size + '; '
+  - style += 'font-size: ' + font_size + '; '
+  - style += 'height: ' + size + '; '
+  - style += 'width: ' + size + '; '
+  - style += 'color: ' + color + '; '
+  - style += 'background-color: ' + background_color + '; '
+
+  .circle-icon(style='#{style}')
+    if fa_symbol
+      span.fa(class='fa-#{spec.fa_symbol}')
+    if symbol
+      span=symbol

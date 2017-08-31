@@ -1,0 +1,14 @@
+mixin img-zoomable(spec)
+  - spec = spec || {}
+  - var src = spec.src || spec.img || spec.image || ''
+  - var alt = spec.alt || ''
+  - var type = spec.type || ''
+
+  .row.padding-normal
+    case type
+      when 'big'
+        .col-xs-12.col-md-10.col-md-offset-1
+          img.img-responsive.img-zoomable(src=src alt=alt)
+      default
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+            img.img-responsive.img-zoomable(src=src alt=alt)

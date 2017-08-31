@@ -1,0 +1,50 @@
+extends ../_layouts/base
+block navbar
+  +navbar('contacts')
+
+block content
+  .row.contacts
+    .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+      +circle-image({
+        image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/photo.jpg',
+        alt: 'Алексей Усачев',
+        size: '200px'
+      })
+      h1 Алексей Усачёв
+      p.
+        Если вы хотите задать вопрос, заказать покраску, или сыграть, то всегда можете воспользоваться любыми из этих способов связи. Я живу в Москве.
+      br
+      p.
+        <span class="fa fa-envelope"></span> usachev.2010@gmail.com
+      p.
+       <span class="fa fa-phone"></span> 8 906 097 08 53
+      .row
+        .col-xs-6.col-xs-offset-3
+          .flex
+            div
+              a(href='https://vk.com/id3738769' target='blank')
+                +circle-icon({
+                  size: '50px',
+                  font_size: '26px',
+                  color: 'white',
+                  background_color: 'black',
+                  fa_symbol: 'vk'
+                })
+            div
+              a(href='https://instagram.com/wargameart' target='blank')
+                +circle-icon({
+                  size: '50px',
+                  font_size: '26px',
+                  color: 'white',
+                  background_color: 'black',
+                  fa_symbol: 'instagram'
+                })
+            div
+              a(href='https://www.youtube.com/channel/UCMdM7q8yKj0zRN-SDLWO6rw/playlists' target='blank')
+                +circle-icon({
+                  size: '50px',
+                  font_size: '26px',
+                  color: 'white',
+                  background_color: 'black',
+                  fa_symbol: 'youtube'
+                })

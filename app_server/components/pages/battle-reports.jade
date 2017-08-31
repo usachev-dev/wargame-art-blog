@@ -1,0 +1,19 @@
+extends ../_layouts/base
+block navbar
+  +navbar('battle-reports')
+
+block content
+  +feature-post({
+    caption: 'Последняя запись',
+    title: 'Игра в Tercios Liber Militum',
+    subtitle: 'Шведы против.',
+    image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/terciosBattleReport2/IMG_20170820_125849.jpg',
+    link: 'tercios-battle-report-2'
+  })
+  +feature-post({
+    caption: 'Баттл-репорт',
+    title: 'Игра в Tercios Liber Militum',
+    subtitle: 'Шведы против Валахов',
+    image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/terciosBattleReport/IMG_20170809_195234.jpg',
+    link: 'tercios-battle-report'
+  })

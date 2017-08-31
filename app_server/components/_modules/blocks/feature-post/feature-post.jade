@@ -1,0 +1,21 @@
+mixin feature-post(spec)
+  - spec = spec || {}
+  - var caption = spec.caption || 'Последняя запись'
+  - var title = spec.title || ''
+  - var subtitle = spec.subtitle || ''
+  - var image = spec.image || ''
+  - var link = '/posts/'+ spec.link || '/posts/'
+  - var column = 'col-xs-12 col-md-6 col-md-offset-3'
+
+  .row.feature-post
+    div(class=column)
+      a(href=link)
+        h5.feature-post__caption=caption
+    div(class=column)
+      a(href=link)
+        h2.feature-post__title=title
+    div(class=column)
+      a(href=link)
+        p.feature-post__subtitle=subtitle
+    div(class=column)
+      img.img-responsive(src=image)

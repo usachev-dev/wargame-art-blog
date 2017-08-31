@@ -1,0 +1,14 @@
+mixin chapter-title(spec)
+  - spec = spec || {}
+  - var chapter_number = spec.chapter_number || {}
+  - var title = spec.title || ''
+  - var subtitle = spec.subtitle || ''
+
+  .row.chapter-title
+    .col-xs-12
+      +circle-icon({symbol:chapter_number})
+    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+      h2=title
+    if subtitle
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+        p=subtitle

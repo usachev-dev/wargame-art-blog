@@ -1,0 +1,11 @@
+extends ../_layouts/base
+
+block config
+  - var baseUrl = '/'
+  - var post = data || { blocks:[]}
+
+block content
+  +title-slide(post)
+  for block in post.blocks
+    +#{block.name}(block)
+//

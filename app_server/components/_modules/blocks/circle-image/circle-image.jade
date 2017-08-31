@@ -1,0 +1,8 @@
+mixin circle-image(spec)
+  - spec = spec || {}
+  - var image = spec.image || ''
+  - var alt = spec.alt || 'Wargame Art'
+  - var size = spec.size || '160px'
+  - var style = 'width: ' + size + '; ';
+  - style += 'height: ' + size + '; ';
+  image.circle-image(style='#{style}' src=image alt=alt)

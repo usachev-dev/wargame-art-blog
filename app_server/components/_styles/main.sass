@@ -1,0 +1,110 @@
+// Normalize Styles
+@import ../../../node_modules/normalize.css/normalize
+
+//Bootstrap
+//@import ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss
+@import https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+
+//Fonts
+@import https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+@font-face
+  font-family: Molot
+  src: url(/fonts/MolotRegular/MolotRegular.woff)
+
+
+$gunmetal: #292E37
+$basic-red: #CC0000
+
+$color-red-0: #CC0000	// Main Primary color */
+$color-red-1: #FF4D4D
+$color-red-2: #F81717
+$color-red-3: #A70000
+$color-red-4: #7D0000
+
+// As RGBa codes */
+
+$rgba-red-0: rgba(204, 0, 0, 1)	// Main Primary color */
+$rgba-red-1: rgba(255, 77, 77, 1)
+$rgba-red-2: rgba(248, 23, 23, 1)
+$rgba-red-3: rgba(167, 0, 0, 1)
+$rgba-red-4: rgba(125, 0, 0, 1)
+
+$background-grey: #F0F0F0
+
+$navbar-custom-height: 50px
+
+// Breakpoints
+$xs: (max-width: 575px)
+$sm: (min-width: 576px) and (max-width: 767px)
+$md: (min-width: 768px) and (max-width: 991px)
+$lg: (min-width: 992px) and (max-width: 1199px)
+$xl: (min-width: 1200px)
+
+$sm-plus: (min-width: 576px)
+$md-plus: (min-width: 768px)
+$lg-plus: (min-width: 992px)
+
+// Import Modules
+@import ../_modules/navbar/navbar
+@import ../_modules/footer/footer
+@import ../_modules/modal/modal
+
+// Import Blocks
+@import ../_modules/blocks/circle-icon/circle-icon
+@import ../_modules/blocks/cover-with-face/cover-with-face
+@import ../_modules/blocks/text/text
+@import ../_modules/blocks/feature-post/feature-post
+@import ../_modules/blocks/circle-image/circle-image
+@import ../_modules/blocks/img-zoomable/img-zoomable
+@import ../_modules/blocks/title-slide/title-slide
+@import ../_modules/blocks/chapter-title/chapter-title
+@import ../_modules/blocks/image-with-text/image-with-text
+@import ../_modules/blocks/list/list
+@import ../_modules/blocks/image-with-caption/image-with-caption
+@import ../_modules/blocks/list-alternating-images/list-alternating-images
+
+body
+  font-family: 'Open Sans', sans-serif
+  color: $gunmetal
+  font-size: 18px
+  font-weight: normal
+
+.main
+  margin-top: $navbar-custom-height
+
+.contacts
+  text-align: center
+  margin-top: 15vh
+  margin-bottom: 25vh
+
+.red-text
+  color: $basic-red
+.text-align-center
+  text-align: center
+.flex
+  display: flex
+  width: 100%
+  justify-content: space-around
+.no-scroll
+  overflow: hidden
+.padding-normal
+  padding: 50px 0 30px 0
+
+
+h1,h2,h3,h4,h5
+  font-family: Roboto, sans-serif
+  font-weight: bold
+  color: black
+  margin-bottom: 10px
+
+h1
+  font-size: 36px
+h2
+  font-size: 30px
+h3
+  font-size: 26px
+h4
+  font-size: 22px
+h5
+  font-size: 18px

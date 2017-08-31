@@ -1,0 +1,31 @@
+mixin footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .footer
+    .footer__icon-row
+      .footer__icon-row__item
+        a(href='https://vk.com/id3738769' target='blank')
+          +circle-icon({ size: '70px', font_size: '36px', color: '#292E37', background_color: 'white', fa_symbol: 'vk' })
+      .footer__icon-row__item
+        a(href='https://www.youtube.com/channel/UCMdM7q8yKj0zRN-SDLWO6rw/playlists' target='blank')
+          +circle-icon({
+            size: '70px',
+            font_size: '36px',
+            color: '#292E37',
+            background_color: 'white',
+            fa_symbol: 'youtube'
+          })
+      .footer__icon-row__item
+        a(href='https://instagram.com/wargameart' target='blank')
+          +circle-icon({
+            size: '70px',
+            font_size: '36px',
+            color: '#292E37',
+            background_color: 'white',
+            fa_symbol: 'instagram'
+          })
+    .row.footer__copyright-row
+      p © Алексей Усачев 2017
+      //p(style="font-size: 10px; text-decoration: none").
+        Использованы иконки с <a href="http://tilda.cc" style="color: white; text-decoration: underline;">tilda.cc</a>©

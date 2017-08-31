@@ -1,0 +1,15 @@
+mixin cover-with-face(spec)
+  - spec = spec || {}
+  - var cover = spec.cover || ''
+  - var face = spec.face || ''
+  - var name = spec.name || ''
+  - var caption = spec.caption || ''
+
+  .row
+    .cover-with-face
+      .cover-with-face__cover(style="background-image: url(#{cover}")
+      .cover-with-face__face(style="background-image: url(#{face}")
+      .cover-with-face__name
+        h1 #{name}
+      .cover-with-face__caption
+        p #{caption}

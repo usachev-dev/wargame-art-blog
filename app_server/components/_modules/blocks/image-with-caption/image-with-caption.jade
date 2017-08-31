@@ -1,0 +1,18 @@
+mixin image-with-caption(spec)
+  - spec = spec || {}
+  - var image = spec.image || spec.img || spec.src || ''
+  - var caption = spec.caption || spec.text || ''
+  - var type = spec.type || ''
+
+  .row.image-with-caption.padding-normal
+    case type
+      when 'big'
+        .col-xs-12.col-md-10.col-md-offset-1
+          img.img-responsive.img-zoomable(src=image alt=caption)
+        .col-xs-12.col-md-10.col-md-offset-1
+          p!=caption
+      default
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+          img.img-responsive.img-zoomable(src=image alt=caption)
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+          p!=caption

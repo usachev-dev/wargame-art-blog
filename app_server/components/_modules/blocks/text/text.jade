@@ -1,0 +1,14 @@
+mixin text(spec)
+  - spec = spec || {}
+  - var type = 'text_' + spec.type || ''
+  - var text = spec.text || ''
+  - var background = spec.background || ''
+
+  div(class='row text #{type}' style='background-color: #{background-color};')
+    case type
+      when 'text_key-phrase'
+        .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+          p!=text
+      default
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+          p!=text

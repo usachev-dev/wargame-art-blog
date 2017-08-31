@@ -1,0 +1,36 @@
+extends ../_layouts/base
+
+block content
+  +cover-with-face({
+    cover: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/cover1.jpg',
+    face: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/photo.jpg',
+    name: 'Алексей Усачёв',
+    caption: 'Блог про варгеймы и миниатюры'
+  })
+  +text({
+    type: 'key-phrase',
+    text: 'C 2004 года я увлекаюсь варгеймами, и теперь, наконец-то, у меня есть блог, в котором я могу поведать всем о этом чудесном занятии.'
+  })
+  +feature-post({
+    caption: 'Баттл-репорт',
+    title: 'Игра в Tercios Liber Militum',
+    subtitle: 'Шведы против.',
+    image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/terciosBattleReport2/IMG_20170820_125849.jpg',
+    link: 'tercios-battle-report-2'
+  })
+  +feature-post({
+    caption: 'Последняя запись',
+    title: 'Введение в исторические варгеймы',
+    subtitle: 'Как перестать сомневаться и начать играть',
+    image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/historical-getting-started/1_1.jpg',
+    link: 'historical-getting-started'
+  })
+  +feature-post({
+    caption: 'Армия на параде',
+    title: 'Тридцатилетняя война, Шведская армия',
+    subtitle: 'Totentanz Miniatures, 15мм',
+    image: 'https://s3.amazonaws.com/wargame-art/gallery/totentanz-swedes-15mm/DSC_9453.JPG',
+    link: 'swedes-totentanz-tyw'
+  })
+
+

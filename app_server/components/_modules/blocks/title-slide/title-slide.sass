@@ -1,0 +1,50 @@
+.title-slide
+  height: 100vh
+  margin-top: -$navbar-custom-height
+  //margin-bottom: -$navbar-custom-height
+  display: flex
+  justify-content: center
+  text-align: center
+
+.title-slide__bg
+  background-attachment: fixed
+  background-size: cover
+  backgound-repeat: no-repeat
+  background-position: center center
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+.title-slide__overlay
+  background-color: black
+  opacity: 0.4
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.title-slide__container
+  margin: auto
+  z-index: 20
+
+.title-slide__content
+  color: white
+  max-width: 100vw
+  max-height: 100vh
+  h1
+    color: white
+    font-size: 36px
+    padding-bottom: 50px
+    @media #{$md-plus}
+      font-size: 72px
+  p
+    font-size: 16px
+    @media #{$md-plus}
+      font-size: 30px
+

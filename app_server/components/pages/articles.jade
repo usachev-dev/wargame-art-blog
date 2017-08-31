@@ -1,0 +1,19 @@
+extends ../_layouts/base
+block navbar
+  +navbar('articles')
+
+block content
+  +feature-post({
+    caption: 'Последняя запись',
+    title: 'Введение в исторические варгеймы',
+    subtitle: 'Как перестать сомневаться и начать играть',
+    image: 'https://s3.eu-central-1.amazonaws.com/wargame-art-blog/posts/historical-getting-started/1_1.jpg',
+    link: 'historical-getting-started'
+  })
+  +feature-post({
+    caption: 'Армия на параде',
+    title: 'Тридцатилетняя война, Шведская армия',
+    subtitle: 'Totentanz Miniatures, 15мм',
+    image: 'https://s3.amazonaws.com/wargame-art/gallery/totentanz-swedes-15mm/DSC_9453.JPG',
+    link: 'swedes-totentanz-tyw'
+  })

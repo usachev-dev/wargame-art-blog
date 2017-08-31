@@ -1,0 +1,18 @@
+mixin list-alternating-images(spec)
+  - spec = spec || []
+  - var list = spec.list
+
+  .padding-normal
+    each item, index in list
+      .row.list-alternating-images
+        div(class='col-xs-12 col-sm-10 col-md-8 col-lg-6 col-lg-offset-2 '+((index % 2 == 0) ? '' : 'col-xs-push-2'))
+          .list-alternating-images__text
+            h4=item.title
+            p=item.text
+        div(class='col-xs-12 col-sm-2 '+((index % 2 == 0) ? '' : 'col-sm-pull-10 col-md-pull-8 col-lg-pull-6'))
+          .list-alternating-images__image
+            img.img-responsive.img-zoomable(src=item.image alt=item.caption)
+          .list-alternating-images__caption
+            p=item.caption
+            if item.subcaption
+              p.list-alternating-images__caption_subtext!=item.subcaption
