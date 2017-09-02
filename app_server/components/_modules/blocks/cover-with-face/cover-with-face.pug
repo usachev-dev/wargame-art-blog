@@ -7,9 +7,9 @@ mixin cover-with-face(spec)
 
   .row
     .cover-with-face
-      .cover-with-face__cover(style="background-image: url(#{cover}")
-      .cover-with-face__face(style="background-image: url(#{face}")
+      .cover-with-face__cover(style="background-image: url("+cover+")")
+      .cover-with-face__face(style="background-image: url("+face+")")
       .cover-with-face__name
-        h1 #{name}
+        h1=name
       .cover-with-face__caption
-        p #{caption}
+        p=caption

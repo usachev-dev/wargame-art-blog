@@ -13,8 +13,8 @@ mixin circle-icon(spec)
   - style += 'color: ' + color + '; '
   - style += 'background-color: ' + background_color + '; '
 
-  .circle-icon(style='#{style}')
+  .circle-icon(style=style)
     if fa_symbol
-      span.fa(class='fa-#{spec.fa_symbol}')
+      span.fa(class='fa-'+fa_symbol)
     if symbol
       span=symbol
