@@ -11,6 +11,6 @@ router.get('/posts',ctrlPages.posts);
 router.get('/articles',ctrlPages.articles);
 
 
-router.get(/\/posts\/(.*)/, ctrlPost.post);
+router.get('/posts/:slugUrl', ctrlPost.post);
 
 module.exports = router;

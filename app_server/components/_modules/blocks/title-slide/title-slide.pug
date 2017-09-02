@@ -2,11 +2,11 @@ mixin title-slide(spec)
   - spec = spec || {}
   - var title = spec.title || ''
   - var subtitle = spec.subtitle || ''
-  - var image = spec.cover || ''
+  - var image = spec.cover || spec.image || ''
 
   .row
     .title-slide
-      .title-slide__bg(style="background-image: url(#{image})")
+      .title-slide__bg(style="background-image: url("+image+")")
       .title-slide__overlay
       .title-slide__container
         .title-slide__content
