@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app.js",
+    "start": "node ./bin/www",
     "clean-deps": "rimraf node_modules"
   },
   "dependencies": {
@@ -15,8 +15,6 @@
     "fs": "0.0.1-security",
     "jquery": "~3.1.1",
     "morgan": "~1.7.0",
-    "nodemon": "^1.11.0",
-
     "pug": "^2.0.0-rc.2",
     "serve-favicon": "~2.3.0"
   },
@@ -69,9 +67,6 @@
   "//": "CUSTOM CONFIGURATION",
   "config": {
     "//": "Entry files",
-    "host": "127.0.0.1",
-    "port": "3000",
-    "baseUrl": "./",
     "directories": {
       "source": "app_server/components",
       "destination": "public/build",
