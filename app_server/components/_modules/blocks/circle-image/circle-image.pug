@@ -1,8 +1,13 @@
 mixin circle-image(spec)
   - spec = spec || {}
   - var image = spec.image || ''
-  - var alt = spec.alt || 'Wargame Art'
+  - var alt = spec.alt || 'Покраска миниатюр Wargame Art'
   - var size = spec.size || '160px'
-  - var style = 'width: ' + size + '; ';
-  - style += 'height: ' + size + '; ';
-  image.circle-image(style='#{style}' src=image alt=alt)
+  - var style = 'width: ' + size + '; '
+  - style += 'height: ' + size + '; '
+  - var imageSrc = imagePath+'/320/'+image
+  - var srcSet = imagePath+'/640/'+image+' 640w, '
+  - srcSet += imagePath+'/1280/'+image+' 1280w, '
+  - srcSet += imagePath+'/1980/'+image+' 1980w'
+
+  image.circle-image(style=style src=imageSrc srcset=srcSet alt=alt)

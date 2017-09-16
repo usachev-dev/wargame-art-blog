@@ -3,10 +3,14 @@ mixin title-slide(spec)
   - var title = spec.title || ''
   - var subtitle = spec.subtitle || ''
   - var image = spec.cover || spec.image || ''
+  - var imageSet = 'url('+imagePath+'/320/'+image+') 320w, '
+  - imageSet += 'url('+imagePath+'/640/'+image+') 640, '
+  - imageSet += 'url('+imagePath+'/1280/'+image+') 1280, '
+  - imageSet += 'url('+imagePath+'/1980/'+image+') 1980w'
 
   .row
     .title-slide
-      .title-slide__bg(style="background-image: url("+image+")")
+      .title-slide__bg(style='background-image: url('+imagePath+'/1280/'+image+'); background-image: image-set('+imageSet+');')
       .title-slide__overlay
       .title-slide__container
         .title-slide__content

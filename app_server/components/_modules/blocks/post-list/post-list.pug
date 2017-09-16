@@ -1,0 +1,26 @@
+mixin post-list(spec)
+  - spec = spec || {}
+  - var list = spec.list || []
+  - var categories = {"battle-reports": "Отчеты о играх","articles": "Статьи","painting": "О покраске"}
+  .post-list.row
+    for post in list
+      - var title = post.title || ''
+      - var category = post.category || ''
+      - var subtitle = post.subtitle || ''
+      - var image = post.cover || post.image || post.img
+      - var slug = post.slug || ''
+      - var imagePath = awsBucketUrl+'/posts/'+slug
+      - var imageSet = 'image-set(url('+imagePath+'/320/'+image+') 320w, '
+      - imageSet += 'url('+imagePath+'/640/'+image+') 640w, '
+      - imageSet += 'url('+imagePath+'/1280/'+image+') 1280w, '
+      - imageSet += 'url('+imagePath+'/1980/'+image+') 1980w);'
+      .row.post-list-element
+        a(href="/posts/"+slug)
+          .col-xs-12.col-sm-6.post-list-element__section
+            .post-list-element__text
+              h4.post-list-element__category=categories[category]
+              h2.post-list-element__title=title
+              p.post-list-element__subtitle=subtitle
+          .col-xs-12.col-sm-6.post-list-element__section
+            .post-list-element__image-wrapper
+              .post-list-element__image(style='background-image: url(' + imagePath+'/640/'+image + '); background-image:' + imageSet)

@@ -1,14 +1,18 @@
 mixin img-zoomable(spec)
   - spec = spec || {}
-  - var src = spec.src || spec.img || spec.image || ''
+  - var image = spec.src || spec.img || spec.image || ''
   - var alt = spec.alt || ''
   - var type = spec.type || ''
+  - var imageSrc = imagePath+'/320/'+image
+  - var srcSet = imagePath+'/640/'+image+' 640w, '
+  - srcSet += imagePath+'/1280/'+image+' 1280w, '
+  - srcSet += imagePath+'/1980/'+image+' 1980w'
 
   .row.padding-normal
     case type
       when 'big'
         .col-xs-12.col-md-10.col-md-offset-1
-          img.img-responsive.img-zoomable(src=src alt=alt)
+          img.img-responsive.img-zoomable(src=imageSrc srcset=srcSet alt=alt)
       default
         .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-            img.img-responsive.img-zoomable(src=src alt=alt)
+            img.img-responsive.img-zoomable(src=imageSrc srcset=srcSet alt=alt)

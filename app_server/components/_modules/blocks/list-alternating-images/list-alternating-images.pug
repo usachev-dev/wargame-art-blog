@@ -1,17 +1,22 @@
 mixin list-alternating-images(spec)
   - spec = spec || []
-  - var list = spec.list
+  - var list = spec.listAlternatingImages
 
-  .padding-normal
-    each item, index in list
-      .row.list-alternating-images
-        div(class='col-xs-12 col-sm-10 col-md-8 col-lg-6 col-lg-offset-2 '+((index % 2 == 0) ? '' : 'col-xs-push-2'))
+  each item, index in list
+    - var image = item.image
+    - var imageSrc = imagePath+'/320/'+image
+    - var srcSet = imagePath+'/640/'+image+' 640w, '
+    - srcSet += imagePath+'/1280/'+image+' 1280w, '
+    - srcSet += imagePath+'/1980/'+image+' 1980w'
+    .row.list-alternating-images
+      .padding-normal
+        div(class='col-xs-12 col-sm-8 col-lg-6 col-lg-offset-2 '+((index % 2 == 0) ? '' : 'col-sm-push-4 col-lg-push-2'))
           .list-alternating-images__text
             h4=item.title
             p=item.text
-        div(class='col-xs-12 col-sm-2 '+((index % 2 == 0) ? '' : 'col-sm-pull-10 col-md-pull-8 col-lg-pull-6'))
+        div(class='col-xs-12 col-sm-4 col-lg-2 '+((index % 2 == 0) ? '' : 'col-sm-pull-8 col-lg-pull-6'))
           .list-alternating-images__image
-            img.img-responsive.img-zoomable(src=item.image alt=item.caption)
+            img.img-responsive.img-zoomable(src=imageSrc srcset=srcSet alt=item.caption)
           .list-alternating-images__caption
             p=item.caption
             if item.subcaption

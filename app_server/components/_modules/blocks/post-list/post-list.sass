@@ -1,0 +1,32 @@
+.post-list-element
+  margin: 0
+  a
+    p
+      color: $gunmetal
+  &__section
+    padding: 0
+  &__text
+    padding: 40px 20px 20px 20px
+    border-left: 1px solid $light-grey
+    border-top: 1px solid $light-grey
+    @media #{$md-plus}
+      height: 350px
+  &__category
+    color: $color-red-1
+  &__image-wrapper
+    position: relative
+    height: 350px
+  &__image
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+
+.post-list-element:last-child
+  .post-list-element__text
+    border-bottom: 1px solid $light-grey

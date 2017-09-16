@@ -1,10 +1,10 @@
 mixin text(spec)
   - spec = spec || {}
-  - var type = 'text_' + spec.type || ''
+  - if(spec.type) { var type = 'text_' + spec.type } else { var type = '' }
   - var text = spec.text || ''
   - var background = spec.background || ''
 
-  div(class='row text #{type}' style='background-color: #{background-color};')
+  div(class='row text '+type style='background-color: ' + background+';')
     case type
       when 'text_key-phrase'
         .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2

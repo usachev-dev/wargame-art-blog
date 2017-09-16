@@ -1,3 +1,5 @@
 .idea/
 node_modules
 start.cmd
+app_server/components/_images
+public/images

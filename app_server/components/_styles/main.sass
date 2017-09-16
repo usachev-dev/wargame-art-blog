@@ -31,6 +31,7 @@ $rgba-red-3: rgba(167, 0, 0, 1)
 $rgba-red-4: rgba(125, 0, 0, 1)
 
 $background-grey: #F0F0F0
+$light-grey: #c4c4c4
 
 $navbar-custom-height: 50px
 
@@ -63,11 +64,14 @@ $lg-plus: (min-width: 992px)
 @import ../_modules/blocks/list/list
 @import ../_modules/blocks/image-with-caption/image-with-caption
 @import ../_modules/blocks/list-alternating-images/list-alternating-images
+@import ../_modules/blocks/post-list/post-list
 
 body
   font-family: 'Open Sans', sans-serif
   color: $gunmetal
-  font-size: 18px
+  font-size: 14px
+  @media #{$sm-plus}
+    font-size: 18px
   font-weight: normal
 
 .main
@@ -99,12 +103,25 @@ h1,h2,h3,h4,h5
   margin-bottom: 10px
 
 h1
-  font-size: 36px
-h2
   font-size: 30px
-h3
-  font-size: 26px
-h4
+  @media #{$sm-plus}
+    font-size: 36px
+h2
   font-size: 22px
-h5
+  @media #{$sm-plus}
+    font-size: 30px
+h3
   font-size: 18px
+  @media #{$sm-plus}
+    font-size: 26px
+h4
+  font-size: 16px
+  @media #{$sm-plus}
+    font-size: 22px
+h5
+  font-size: 16px
+  @media #{$sm-plus}
+    font-size: 20px
+
+.container.post-list
+  padding: 0

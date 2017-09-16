@@ -3,9 +3,15 @@ mixin feature-post(spec)
   - var caption = spec.caption || 'Последняя запись'
   - var title = spec.title || ''
   - var subtitle = spec.subtitle || ''
-  - var image = spec.image || ''
+  - var image = spec.image || spec.src || spec.cover || ''
   - var link = '/posts/'+ spec.link || '/posts/'
   - var column = 'col-xs-12 col-md-6 col-md-offset-3'
+  - var imagePath = awsBucketUrl+link
+  - var imageSrc = imagePath+'/320/'+image
+  - var srcSet = imagePath+'/640/'+image+' 640w, '
+  - srcSet += imagePath+'/1280/'+image+' 1280w, '
+  - srcSet += imagePath+'/1980/'+image+' 1980w'
+
 
   .row.feature-post
     div(class=column)
@@ -18,4 +24,4 @@ mixin feature-post(spec)
       a(href=link)
         p.feature-post__subtitle=subtitle
     div(class=column)
-      img.img-responsive(src=image)
+      img.img-responsive(src=imageSrc srcset=srcSet)

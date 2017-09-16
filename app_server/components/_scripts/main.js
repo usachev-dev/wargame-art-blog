@@ -8,9 +8,12 @@ import TitleSlide from '../_modules/blocks/title-slide/title-slide';
 
 //modules
 import Modal from '../_modules/modal/modal';
+import Navbar from '../_modules/navbar/navbar';
 
 //console.log(pug.render('p example', {}));
 
 
-var modal = new Modal;
-var imgZoomable = new ImgZoomable(modal);
+var modal = new Modal,
+    imgZoomable = new ImgZoomable(modal),
+    navbar = new Navbar(65);
+

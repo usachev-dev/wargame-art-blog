@@ -14,10 +14,19 @@ mixin navbar(active_page)
       .collapse.navbar-collapse#navbar-collapsible-menu
         ul.nav.navbar-nav.navbar-right
           li(class= active_page === 'painting-service' ? 'active' : '')
-            a(href='http://www.wargame-art.com' target='blank' title="www.wargame-art.com") Услуги покраски
+            a(href='http://www.wargame-art.com' target='blank' title="www.wargame-art.com") Заказать покраску
           li(class= active_page === 'contacts' ? 'active' : '')
-            a(href='/contacts') Контакты
-          li(class= active_page === 'battle-reports' ? 'active' : '')
-            a(href='/battle-reports') Батл-репорты
-          li(class= active_page === 'articles' ? 'active' : '')
-            a(href='/articles') Статьи
+            a(href='/contacts') Связаться
+          li(class= active_page === 'posts' ? 'active' : '')
+            a(href='/posts') Читать
+          //li.dropdown
+            a.dropdown-toggle(href='/posts', data-toggle='dropdown', role='button')
+              | Читать
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='/articles') Статьи
+              li
+                a(href='/battle-reports') Баттл-репорты
+              li
+                a(href='/painting') О покраске

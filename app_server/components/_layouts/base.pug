@@ -16,22 +16,18 @@ include ../_modules/blocks/image-with-caption/image-with-caption
 include ../_modules/blocks/img-zoomable/img-zoomable
 include ../_modules/blocks/list/list
 include ../_modules/blocks/list-alternating-images/list-alternating-images
+include ../_modules/blocks/post-list/post-list
 
-
-//- Custom Configuration
 block config
-  //- Setup site's base URL to match the "baseUrl" key within `package.json`
-  //- Otherwise default to relative pathing
-  //- var baseUrl = config.baseUrl || './'
 
 doctype html
-<html class='no-js' lang='en'>
+<html class='' lang='ru'>
 
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
   title Wargame Art Blog
-  meta(name='description', content= 'A new Yeogurt application')
+  meta(name='description', content= 'Блог о варгеймах Алексея Усачева')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   block stylesheets
     link(rel='stylesheet', href= '/build/styles/main.css')
@@ -49,9 +45,10 @@ body
   block navbar
     +navbar
 
-  .container-fluid
-    .main
-      block content
+  block container
+    .container-fluid
+      .main
+        block content
 
   block footer
     +footer
@@ -60,7 +57,6 @@ body
     +modal
 
   block scripts
-    script(src='/build/appserver/components/_scripts/main.js')
     script(
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -69,6 +65,7 @@ body
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous")
+    script(src='/build/scripts/main.js')
 
 
 </html>

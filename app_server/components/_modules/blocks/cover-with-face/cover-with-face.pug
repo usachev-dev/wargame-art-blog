@@ -4,11 +4,19 @@ mixin cover-with-face(spec)
   - var face = spec.face || ''
   - var name = spec.name || ''
   - var caption = spec.caption || ''
+  - var imageSetFace = 'image-set(url('+imagePath+'/320/'+face+') 320w, '
+  - imageSetFace += 'url('+imagePath+'/640/'+face+') 640w, '
+  - imageSetFace += 'url('+imagePath+'/1280/'+face+') 1280w, '
+  - imageSetFace += 'url('+imagePath+'/1980/'+face+') 1980w)'
+  - var imageSetCover = 'image-set(url('+imagePath+'/320/'+cover+') 320w, '
+  - imageSetCover += 'url('+imagePath+'/640/'+cover+') 640w, '
+  - imageSetCover += 'url('+imagePath+'/1280/'+cover+') 1280w, '
+  - imageSetCover += 'url('+imagePath+'/1980/'+cover+') 1980w);'
 
   .row
     .cover-with-face
-      .cover-with-face__cover(style="background-image: url("+cover+")")
-      .cover-with-face__face(style="background-image: url("+face+")")
+      .cover-with-face__cover(style="background-image: url("+imagePath+'/1280/'+cover+"); background-image: "+imageSetCover)
+      .cover-with-face__face(style="background-image: url("+imagePath+'/1280/'+face+"); background-image: "+imageSetFace)
       .cover-with-face__name
         h1=name
       .cover-with-face__caption
